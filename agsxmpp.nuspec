@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MarkdownLog</id>
+    <version>$version$</version>
+    <authors>ag-software, Kelly Elton</authors>
+    <licenseUrl>http://www.ag-software.net/agsxmpp-sdk/license/</licenseUrl>
+    <projectUrl>https://github.com/octgn/Agsxmpp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Modified Agsxmpp library for use with OCTGN</description>
+    <copyright></copyright>
+    <tags>agsxmpp octgn</tags>
+  </metadata>
+  <files>
+     <file src="trunk\agsxmpp\bin\Debug\agsXMPP.dll" target="lib\net20" />
+     <file src="trunk\agsxmpp\bin\Debug\agsXMPP.pdb" target="lib\net20" />
+  </files>
+</package>
