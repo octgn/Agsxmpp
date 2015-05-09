@@ -12,7 +12,6 @@
     <tags>agsxmpp octgn</tags>
   </metadata>
   <files>
-     <file src="bin\Debug\agsXMPP.dll" target="lib\net20" />
-     <file src="bin\Debug\agsXMPP.pdb" target="lib\net20" />
+     <file src="bin\Net2\Release\agsXMPP.dll" target="lib\net20" />
   </files>
 </package>
