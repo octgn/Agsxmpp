@@ -12,7 +12,7 @@
     <tags>agsxmpp octgn</tags>
   </metadata>
   <files>
-     <file src="trunk\agsxmpp\bin\Debug\agsXMPP.dll" target="lib\net20" />
-     <file src="trunk\agsxmpp\bin\Debug\agsXMPP.pdb" target="lib\net20" />
+     <file src="bin\Debug\agsXMPP.dll" target="lib\net20" />
+     <file src="bin\Debug\agsXMPP.pdb" target="lib\net20" />
   </files>
 </package>
