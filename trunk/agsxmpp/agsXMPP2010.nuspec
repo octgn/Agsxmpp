@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>MarkdownLog</id>
+    <id>Agsxmpp</id>
     <version>$version$</version>
     <authors>ag-software, Kelly Elton</authors>
     <licenseUrl>http://www.ag-software.net/agsxmpp-sdk/license/</licenseUrl>
