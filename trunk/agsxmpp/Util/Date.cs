@@ -17,7 +17,7 @@
  *																					 *
  * For general enquiries visit our website at:										 *
  * http://www.ag-software.de														 *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */ 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 using System;
 
@@ -28,45 +28,6 @@ namespace agsXMPP.Util
 	/// </summary>
 	public class Time
 	{
-        /*
-            <x xmlns="jabber:x:delay" from="cachet@conference.cachet.myjabber.net/dan" stamp="20060303T15:43:08" />         
-        */
-		/// <summary>
-        /// 
-		/// </summary>
-		/// <param name="date"></param>
-		/// <returns></returns>
-		public static DateTime Date(string date)
-		{
-			// better put here a try catch in case a client sends a wrong formatted date
-			try
-			{
-				DateTime dt = new DateTime( int.Parse(date.Substring(0, 4)),
-					                        int.Parse(date.Substring(4, 2)),
-					                        int.Parse(date.Substring(6, 2)),
-					                        int.Parse(date.Substring(9, 2)),
-					                        int.Parse(date.Substring(12, 2)),
-					                        int.Parse(date.Substring(15, 2))
-                                          );
-                
-                return dt.ToLocalTime();
-			}
-			catch
-			{
-				return DateTime.MinValue;
-			}
-		}
-		
-		/// <summary>
-		/// Get a XMPP string representation of a Date        
-		/// </summary>
-		/// <param name="date">DateTime</param>
-		/// <returns>XMPP string representation of a DateTime value</returns>
-		public static string Date(DateTime date)
-		{			
-			return date.ToString("yyyyMMddTHH:mm:ss");
-		}
-
         /// <summary>
         /// The new standard used by XMPP in JEP-82 (ISO-8601)
         /// <example>1970-01-01T00:00Z</example>
@@ -95,13 +56,9 @@ namespace agsXMPP.Util
 		/// <returns></returns>
         public static string ISO_8601Date(DateTime date)
 		{
-            return date.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.fffZ");                                
-            //return date.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");	
-            //return date.ToString("yyyy-MM-ddTHH:mm:ssZ");	
-
-            //("yyyy'-'MM'-'dd HH':'mm':'ss'Z'") 			
+            return date.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
 		}
-        
+
         public static TimeSpan UtcOffset()
         {
             var localZone = TimeZone.CurrentTimeZone;

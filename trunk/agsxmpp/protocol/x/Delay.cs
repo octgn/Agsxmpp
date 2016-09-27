@@ -17,7 +17,7 @@
  *																					 *
  * For general enquiries visit our website at:										 *
  * http://www.ag-software.de														 *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */ 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 using System;
 using agsXMPP.Xml.Dom;
@@ -27,8 +27,8 @@ namespace agsXMPP.protocol.x
 	// <presence to="gnauck@myjabber.net/myJabber v3.5" from="yahoo.myjabber.net/registered">
 	//		<status>Extended Away</status>
 	//		<show>xa</show><priority>5</priority>
-	//		<x stamp="20050206T13:09:50" from="gnauck@myjabber.net/myJabber v3.5" xmlns="jabber:x:delay"/>    
-	// </presence> 
+	//		<x stamp="20050206T13:09:50" from="gnauck@myjabber.net/myJabber v3.5" xmlns="jabber:x:delay"/>
+	// </presence>
 
 	/// <summary>
     /// <para>
@@ -42,7 +42,7 @@ namespace agsXMPP.protocol.x
 	{
 		public Delay()
 		{
-			this.TagName	= "x";
+			this.TagName	= "delay";
 			this.Namespace	= Uri.X_DELAY;
 		}
 
@@ -65,11 +65,11 @@ namespace agsXMPP.protocol.x
 		{
 			get
 			{
-				return Util.Time.Date(GetAttribute("stamp"));
+				return Util.Time.ISO_8601Date(GetAttribute("stamp"));
 			}
 			set
 			{
-				SetAttribute("stamp", Util.Time.Date(value));
+				SetAttribute("stamp", Util.Time.ISO_8601Date(value));
 			}
 		}
 	}

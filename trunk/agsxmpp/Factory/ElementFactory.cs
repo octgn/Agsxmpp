@@ -30,7 +30,7 @@ namespace agsXMPP.Factory
 	/// Factory class that implements the factory pattern for builing our Elements.
 	/// </summary>
 	public class ElementFactory
-	{		
+	{
 		/// <summary>
 		/// This Hashtable stores Mapping of protocol (tag/namespace) to the agsXMPP objects
 		/// </summary>
@@ -42,19 +42,19 @@ namespace agsXMPP.Factory
 			AddElementType("message",			Uri.CLIENT,					typeof(agsXMPP.protocol.client.Message));
 			AddElementType("presence",			Uri.CLIENT,					typeof(agsXMPP.protocol.client.Presence));
 			AddElementType("error",				Uri.CLIENT,					typeof(agsXMPP.protocol.client.Error));
-						
+
 			AddElementType("agent",				Uri.IQ_AGENTS,				typeof(agsXMPP.protocol.iq.agent.Agent));
-			
+
 			AddElementType("item",				Uri.IQ_ROSTER,				typeof(agsXMPP.protocol.iq.roster.RosterItem));
 			AddElementType("group",				Uri.IQ_ROSTER,				typeof(agsXMPP.protocol.Base.Group));
 			AddElementType("group",				Uri.X_ROSTERX,				typeof(agsXMPP.protocol.Base.Group));
 
-			AddElementType("item",				Uri.IQ_SEARCH,				typeof(agsXMPP.protocol.iq.search.SearchItem));			
-			
+			AddElementType("item",				Uri.IQ_SEARCH,				typeof(agsXMPP.protocol.iq.search.SearchItem));
+
             // Stream stuff
-			AddElementType("stream",			Uri.STREAM,					typeof(agsXMPP.protocol.Stream));			
+			AddElementType("stream",			Uri.STREAM,					typeof(agsXMPP.protocol.Stream));
             AddElementType("error",				Uri.STREAM,					typeof(agsXMPP.protocol.Error));
-			
+
 			AddElementType("query",				Uri.IQ_AUTH,				typeof(agsXMPP.protocol.iq.auth.Auth));
 			AddElementType("query",				Uri.IQ_AGENTS,				typeof(agsXMPP.protocol.iq.agent.Agents));
 			AddElementType("query",				Uri.IQ_ROSTER,				typeof(agsXMPP.protocol.iq.roster.Roster));
@@ -67,30 +67,30 @@ namespace agsXMPP.Factory
 			AddElementType("query",				Uri.IQ_AVATAR,				typeof(agsXMPP.protocol.iq.avatar.Avatar));
 			AddElementType("query",				Uri.IQ_REGISTER,			typeof(agsXMPP.protocol.iq.register.Register));
 			AddElementType("query",				Uri.IQ_PRIVATE,				typeof(agsXMPP.protocol.iq.@private.Private));
-            
+
             // Privacy Lists
             AddElementType("query",             Uri.IQ_PRIVACY,             typeof(agsXMPP.protocol.iq.privacy.Privacy));
             AddElementType("item",              Uri.IQ_PRIVACY,             typeof(agsXMPP.protocol.iq.privacy.Item));
             AddElementType("list",              Uri.IQ_PRIVACY,             typeof(agsXMPP.protocol.iq.privacy.List));
             AddElementType("active",            Uri.IQ_PRIVACY,             typeof(agsXMPP.protocol.iq.privacy.Active));
             AddElementType("default",           Uri.IQ_PRIVACY,             typeof(agsXMPP.protocol.iq.privacy.Default));
-                        
+
 			// Browse
 			AddElementType("service",			Uri.IQ_BROWSE,				typeof(agsXMPP.protocol.iq.browse.Service));
 			AddElementType("item",				Uri.IQ_BROWSE,				typeof(agsXMPP.protocol.iq.browse.BrowseItem));
 
-			// Service Discovery			
-			AddElementType("query",				Uri.DISCO_ITEMS,			typeof(agsXMPP.protocol.iq.disco.DiscoItems));			
+			// Service Discovery
+			AddElementType("query",				Uri.DISCO_ITEMS,			typeof(agsXMPP.protocol.iq.disco.DiscoItems));
 			AddElementType("query",				Uri.DISCO_INFO,				typeof(agsXMPP.protocol.iq.disco.DiscoInfo));
 			AddElementType("feature",			Uri.DISCO_INFO,			    typeof(agsXMPP.protocol.iq.disco.DiscoFeature));
-			AddElementType("identity",			Uri.DISCO_INFO,			    typeof(agsXMPP.protocol.iq.disco.DiscoIdentity));			
+			AddElementType("identity",			Uri.DISCO_INFO,			    typeof(agsXMPP.protocol.iq.disco.DiscoIdentity));
 			AddElementType("item",				Uri.DISCO_ITEMS,			typeof(agsXMPP.protocol.iq.disco.DiscoItem));
 
-			AddElementType("x",					Uri.X_DELAY,				typeof(agsXMPP.protocol.x.Delay));
+			AddElementType("delay",				Uri.X_DELAY,				typeof(agsXMPP.protocol.x.Delay));
 			AddElementType("x",					Uri.X_AVATAR,				typeof(agsXMPP.protocol.x.Avatar));
 			AddElementType("x",					Uri.X_CONFERENCE,			typeof(agsXMPP.protocol.x.Conference));
             AddElementType("x",                 Uri.X_EVENT,                typeof(agsXMPP.protocol.x.Event));
-			
+
 			//AddElementType("x",					Uri.STORAGE_AVATAR,	typeof(agsXMPP.protocol.storage.Avatar));
 			AddElementType("query",				Uri.STORAGE_AVATAR,			typeof(agsXMPP.protocol.storage.Avatar));
 
@@ -101,7 +101,7 @@ namespace agsXMPP.Factory
 			AddElementType("value",				Uri.X_DATA,					typeof(agsXMPP.protocol.x.data.Value));
             AddElementType("reported",          Uri.X_DATA,                 typeof(agsXMPP.protocol.x.data.Reported));
             AddElementType("item",              Uri.X_DATA,                 typeof(agsXMPP.protocol.x.data.Item));
-			
+
 			AddElementType("features",			Uri.STREAM,					typeof(agsXMPP.protocol.stream.Features));
 
 			AddElementType("register",			Uri.FEATURE_IQ_REGISTER,	typeof(agsXMPP.protocol.stream.feature.Register));
@@ -110,7 +110,7 @@ namespace agsXMPP.Factory
 
 			AddElementType("bind",				Uri.BIND,					typeof(agsXMPP.protocol.iq.bind.Bind));
 			AddElementType("session",			Uri.SESSION,				typeof(agsXMPP.protocol.iq.session.Session));
-			
+
 			// TLS stuff
 			AddElementType("failure",			Uri.TLS,					typeof(agsXMPP.protocol.tls.Failure));
 			AddElementType("proceed",			Uri.TLS,					typeof(agsXMPP.protocol.tls.Proceed));
@@ -118,11 +118,11 @@ namespace agsXMPP.Factory
 
 			// SASL stuff
 			AddElementType("mechanisms",		Uri.SASL,					typeof(agsXMPP.protocol.sasl.Mechanisms));
-			AddElementType("mechanism",			Uri.SASL,					typeof(agsXMPP.protocol.sasl.Mechanism));			
+			AddElementType("mechanism",			Uri.SASL,					typeof(agsXMPP.protocol.sasl.Mechanism));
 			AddElementType("auth",				Uri.SASL,					typeof(agsXMPP.protocol.sasl.Auth));
 			AddElementType("response",			Uri.SASL,					typeof(agsXMPP.protocol.sasl.Response));
 			AddElementType("challenge",			Uri.SASL,					typeof(agsXMPP.protocol.sasl.Challenge));
-            
+
             // TODO, this is a dirty hacks for the buggy BOSH Proxy
             // BEGIN
             AddElementType("challenge",         Uri.CLIENT,                 typeof(agsXMPP.protocol.sasl.Challenge));
@@ -132,13 +132,13 @@ namespace agsXMPP.Factory
 			AddElementType("failure",			Uri.SASL,					typeof(agsXMPP.protocol.sasl.Failure));
 			AddElementType("abort",				Uri.SASL,					typeof(agsXMPP.protocol.sasl.Abort));
 			AddElementType("success",			Uri.SASL,					typeof(agsXMPP.protocol.sasl.Success));
-            
+
 			// Vcard stuff
 			AddElementType("vCard",				Uri.VCARD,					typeof(agsXMPP.protocol.iq.vcard.Vcard));
             AddElementType("TEL",				Uri.VCARD,					typeof(agsXMPP.protocol.iq.vcard.Telephone));
 			AddElementType("ORG",				Uri.VCARD,					typeof(agsXMPP.protocol.iq.vcard.Organization));
 			AddElementType("N",					Uri.VCARD,					typeof(agsXMPP.protocol.iq.vcard.Name));
-			AddElementType("EMAIL",				Uri.VCARD,					typeof(agsXMPP.protocol.iq.vcard.Email));			
+			AddElementType("EMAIL",				Uri.VCARD,					typeof(agsXMPP.protocol.iq.vcard.Email));
 			AddElementType("ADR",				Uri.VCARD,					typeof(agsXMPP.protocol.iq.vcard.Address));
 #if !CF
 			AddElementType("PHOTO",				Uri.VCARD,					typeof(agsXMPP.protocol.iq.vcard.Photo));
@@ -179,17 +179,17 @@ namespace agsXMPP.Factory
             AddElementType("streamhost-used",   Uri.BYTESTREAMS,            typeof(agsXMPP.protocol.extensions.bytestreams.StreamHostUsed));
             AddElementType("activate",          Uri.BYTESTREAMS,            typeof(agsXMPP.protocol.extensions.bytestreams.Activate));
             AddElementType("udpsuccess",        Uri.BYTESTREAMS,            typeof(agsXMPP.protocol.extensions.bytestreams.UdpSuccess));
-            
+
 
 			AddElementType("si",				Uri.SI,						typeof(agsXMPP.protocol.extensions.si.SI));
-            
+
             AddElementType("html",              Uri.XHTML_IM,               typeof(agsXMPP.protocol.extensions.html.Html));
             AddElementType("body",              Uri.XHTML,                  typeof(agsXMPP.protocol.extensions.html.Body));
-            
+
             AddElementType("compressed",        Uri.COMPRESS,               typeof(agsXMPP.protocol.extensions.compression.Compressed));
             AddElementType("compress",          Uri.COMPRESS,               typeof(agsXMPP.protocol.extensions.compression.Compress));
             AddElementType("failure",           Uri.COMPRESS,               typeof(agsXMPP.protocol.extensions.compression.Failure));
-                    
+
             // MUC (JEP-0045 Multi User Chat)
             AddElementType("x",                 Uri.MUC,                    typeof(agsXMPP.protocol.x.muc.Muc));
             AddElementType("x",                 Uri.MUC_USER,               typeof(agsXMPP.protocol.x.muc.User));
@@ -204,9 +204,9 @@ namespace agsXMPP.Factory
             AddElementType("query",             Uri.MUC_OWNER,              typeof(agsXMPP.protocol.x.muc.iq.owner.Owner));
             AddElementType("destroy",           Uri.MUC_OWNER,              typeof(agsXMPP.protocol.x.muc.owner.Destroy));
             AddElementType("destroy",           Uri.MUC_USER,               typeof(agsXMPP.protocol.x.muc.user.Destroy));
-            
 
-            //Jabber RPC JEP 0009            
+
+            //Jabber RPC JEP 0009
             AddElementType("query",             Uri.IQ_RPC,                 typeof(agsXMPP.protocol.iq.rpc.Rpc));
             AddElementType("methodCall",        Uri.IQ_RPC,                 typeof(agsXMPP.protocol.iq.rpc.MethodCall));
             AddElementType("methodResponse",    Uri.IQ_RPC,                 typeof(agsXMPP.protocol.iq.rpc.MethodResponse));
@@ -223,7 +223,7 @@ namespace agsXMPP.Factory
             AddElementType("phone-action",      Uri.JIVESOFTWARE_PHONE,     typeof(agsXMPP.protocol.extensions.jivesoftware.phone.PhoneAction));
             AddElementType("phone-status",      Uri.JIVESOFTWARE_PHONE,     typeof(agsXMPP.protocol.extensions.jivesoftware.phone.PhoneStatus));
 
-            // Jingle stuff is in heavy development, we commit this once the most changes on the Jeps are done            
+            // Jingle stuff is in heavy development, we commit this once the most changes on the Jeps are done
             //AddElementType("jingle",            Uri.JINGLE,                 typeof(agsXMPP.protocol.extensions.jingle.Jingle));
             //AddElementType("candidate",         Uri.JINGLE,                 typeof(agsXMPP.protocol.extensions.jingle.Candidate));
 
@@ -276,7 +276,7 @@ namespace agsXMPP.Factory
             AddElementType("subscribe-options", Uri.PUBSUB,                 typeof(agsXMPP.protocol.extensions.pubsub.SubscribeOptions));
             AddElementType("subscription",      Uri.PUBSUB,                 typeof(agsXMPP.protocol.extensions.pubsub.Subscription));
             AddElementType("subscriptions",     Uri.PUBSUB,                 typeof(agsXMPP.protocol.extensions.pubsub.Subscriptions));
-            AddElementType("unsubscribe",       Uri.PUBSUB,                 typeof(agsXMPP.protocol.extensions.pubsub.Unsubscribe));           
+            AddElementType("unsubscribe",       Uri.PUBSUB,                 typeof(agsXMPP.protocol.extensions.pubsub.Unsubscribe));
 
             // HTTP Binding XEP-0124
             AddElementType("body",              Uri.HTTP_BIND,              typeof(agsXMPP.protocol.extensions.bosh.Body));
@@ -285,16 +285,16 @@ namespace agsXMPP.Factory
             AddElementType("received",          Uri.MSG_RECEIPT,            typeof(agsXMPP.protocol.extensions.msgreceipts.Received));
             AddElementType("request",           Uri.MSG_RECEIPT,            typeof(agsXMPP.protocol.extensions.msgreceipts.Request));
 
-            // Bookmark storage XEP-0048         
+            // Bookmark storage XEP-0048
             AddElementType("storage",           Uri.STORAGE_BOOKMARKS,      typeof(agsXMPP.protocol.extensions.bookmarks.Storage));
             AddElementType("url",               Uri.STORAGE_BOOKMARKS,      typeof(agsXMPP.protocol.extensions.bookmarks.Url));
             AddElementType("conference",        Uri.STORAGE_BOOKMARKS,      typeof(agsXMPP.protocol.extensions.bookmarks.Conference));
-            
+
             // XEP-0047: In-Band Bytestreams (IBB)
             AddElementType("open",              Uri.IBB,                    typeof(agsXMPP.protocol.extensions.ibb.Open));
             AddElementType("data",              Uri.IBB,                    typeof(agsXMPP.protocol.extensions.ibb.Data));
             AddElementType("close",             Uri.IBB,                    typeof(agsXMPP.protocol.extensions.ibb.Close));
-                    
+
             // XEP-0153: vCard-Based Avatars
             AddElementType("x",                 Uri.VCARD_UPDATE,           typeof(agsXMPP.protocol.x.vcard_update.VcardUpdate));
 
@@ -308,8 +308,8 @@ namespace agsXMPP.Factory
             // XEP-0145 Annotations
             AddElementType("storage",           Uri.STORAGE_ROSTERNOTES,    typeof(agsXMPP.protocol.extensions.bookmarks.RosterNotes));
             AddElementType("note",              Uri.STORAGE_ROSTERNOTES,    typeof(agsXMPP.protocol.extensions.bookmarks.RosterNote));
-		}		
-		
+		}
+
 		/// <summary>
 		/// Adds new Element Types to the Hashtable
 		/// Use this function also to register your own created Elements.
@@ -332,9 +332,9 @@ namespace agsXMPP.Factory
                     m_table.Add(et.ToString(), t);
             }
 		}
-        
+
 		/// <summary>
-		/// 
+		///
 		/// </summary>
 		/// <param name="prefix"></param>
 		/// <param name="tag"></param>
@@ -345,21 +345,21 @@ namespace agsXMPP.Factory
 			if (ns == null)
 				ns = "";
 
-			ElementType et = new ElementType(tag, ns);			
+			ElementType et = new ElementType(tag, ns);
 			System.Type t = (System.Type) m_table[et.ToString()];
 
-			Element ret;			
+			Element ret;
 			if (t != null)
-				ret = (Element) System.Activator.CreateInstance(t);				
+				ret = (Element) System.Activator.CreateInstance(t);
 			else
-			    ret = new Element(tag);				
-			
+			    ret = new Element(tag);
+
 			ret.Prefix = prefix;
 
 			if (ns!="")
 				ret.Namespace = ns;
-			
+
 			return ret;
-		}		
-	}  
+		}
+	}
 }
