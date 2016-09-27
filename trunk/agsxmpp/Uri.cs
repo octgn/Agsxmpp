@@ -23,13 +23,13 @@ using System;
 
 namespace agsXMPP
 {
-	
+
 	public class Uri
 	{
 		public const string STREAM			= "http://etherx.jabber.org/streams";
-		public const string CLIENT			= "jabber:client";		
-		public const string SERVER			= "jabber:server"; 
-		
+		public const string CLIENT			= "jabber:client";
+		public const string SERVER			= "jabber:server";
+
 		public const string IQ_AGENTS		= "jabber:iq:agents";
 		public const string IQ_ROSTER		= "jabber:iq:roster";
 		public const string IQ_AUTH			= "jabber:iq:auth";
@@ -45,30 +45,30 @@ namespace agsXMPP
         public const string IQ_PRIVACY      = "jabber:iq:privacy";
 
 
-        
+
         /// <summary>
         /// JEP-0009: Jabber-RPC
         /// </summary>
         public const string IQ_RPC          = "jabber:iq:rpc";
-        
-		
-		public const string X_DELAY			= "jabber:x:delay";
+
+
+		public const string X_DELAY			= "urn:xmpp:delay";
 		public const string X_EVENT			= "jabber:x:event";
 		public const string X_AVATAR		= "jabber:x:avatar";
-		
-        
+
+
 		public const string X_CONFERENCE	= "jabber:x:conference";
-		
+
         /// <summary>
         /// jabber:x:data
 		/// </summary>
         public const string X_DATA			= "jabber:x:data";
-		
+
 		/// <summary>
 		/// JEP-0144 Roster Item Exchange
 		/// </summary>
 		public const string X_ROSTERX		= "http://jabber.org/protocol/rosterx";
-		
+
 
 		/// <summary>
         /// Multi User Chat (MUC) JEP-0045
@@ -89,7 +89,7 @@ namespace agsXMPP
 		public const string MUC_OWNER		= "http://jabber.org/protocol/muc#owner";
 
 		// Service Disovery
-		public const string DISCO_ITEMS		= "http://jabber.org/protocol/disco#items";		
+		public const string DISCO_ITEMS		= "http://jabber.org/protocol/disco#items";
 		public const string DISCO_INFO		= "http://jabber.org/protocol/disco#info";
 
 		public const string STORAGE_AVATAR	= "storage:client:avatar";
@@ -102,11 +102,11 @@ namespace agsXMPP
         /// </summary>
         public const string STREAMS         = "urn:ietf:params:xml:ns:xmpp-streams";
         public const string STANZAS			= "urn:ietf:params:xml:ns:xmpp-stanzas";
-		public const string TLS				= "urn:ietf:params:xml:ns:xmpp-tls";		
-		public const string SASL			= "urn:ietf:params:xml:ns:xmpp-sasl";		
-		public const string SESSION			= "urn:ietf:params:xml:ns:xmpp-session";		
+		public const string TLS				= "urn:ietf:params:xml:ns:xmpp-tls";
+		public const string SASL			= "urn:ietf:params:xml:ns:xmpp-sasl";
+		public const string SESSION			= "urn:ietf:params:xml:ns:xmpp-session";
 		public const string BIND			= "urn:ietf:params:xml:ns:xmpp-bind";
-        
+
 
         /// <summary>
         /// jabber:component:accept
@@ -129,7 +129,7 @@ namespace agsXMPP
         /// http://jabber.org/protocol/nick
         /// </summary>
         public const string NICK                = "http://jabber.org/protocol/nick";
-                
+
         /// <summary>
         /// JEP-0085 Chat State Notifications
         /// http://jabber.org/protocol/chatstates
@@ -140,7 +140,7 @@ namespace agsXMPP
         /// JEP-0138: Stream Compression
         /// </summary>
         public const string COMPRESS            = "http://jabber.org/protocol/compress";
-		
+
 		/// <summary>
 		/// JEP-0020: Feature Negotiation http://jabber.org/protocol/feature-neg
 		/// </summary>
@@ -177,7 +177,7 @@ namespace agsXMPP
         public const string XHTML_IM            = "http://jabber.org/protocol/xhtml-im";
         public const string XHTML			    = "http://www.w3.org/1999/xhtml";
 
-        
+
         /// <summary>
         /// XEP-0115: Entity Capabilities (http://jabber.org/protocol/caps)
         /// </summary>
@@ -212,7 +212,7 @@ namespace agsXMPP
         /// <para><seealso cref="http://www.xmpp.org/extensions/xep-0199.html">http://www.xmpp.org/extensions/xep-0199.html</seealso></para>
         /// </summary>
         public const string PING                = "urn:xmpp:ping";
-                
+
         /// <summary>
         /// Ad-Hoc Commands (http://jabber.org/protocol/commands)
         /// </summary>
@@ -220,15 +220,15 @@ namespace agsXMPP
 
         // Pubsub stuff
         public const string PUBSUB              = "http://jabber.org/protocol/pubsub";
-        public const string PUBSUB_EVENT        = "http://jabber.org/protocol/pubsub#event";        
+        public const string PUBSUB_EVENT        = "http://jabber.org/protocol/pubsub#event";
         public const string PUBSUB_OWNER        = "http://jabber.org/protocol/pubsub#owner";
 
         // Http-Binding XEP-0124
         public const string HTTP_BIND           = "http://jabber.org/protocol/httpbind";
-        
+
         /// <summary>
         /// <para>XEP-0184: Message Receipts</para>
-        /// <para>urn:xmpp:receipts</para>        
+        /// <para>urn:xmpp:receipts</para>
         /// </summary>
         public const string MSG_RECEIPT         = "urn:xmpp:receipts";
 
@@ -263,5 +263,5 @@ namespace agsXMPP
         /// <para>storage:rosternotes</para>
         /// </summary>
         public const string STORAGE_ROSTERNOTES = "storage:rosternotes";
-	}	
+	}
 }
